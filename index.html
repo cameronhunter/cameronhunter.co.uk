@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<script src="/js/head.min.js"></script>
-		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/main.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<div id="container">
@@ -24,17 +24,17 @@
 					<div id="details">
 						<span class="title">Software Engineer</span> at <a href="http://www.amazon.com" class="org">Amazon.com</a> &mdash;
 						<span class="adr">
-							<span class="locality">Edinburgh, United Kingdom</span>
+							<span class="locality">Edinburgh, <span>United Kingdom</span></span>
 						</span>
 					</div>
 				</header>
 				<section id="contact">
 					<ul>
-						<li><a href="mailto:hello@cameronhunter.co.uk" class="email" rel="me">Email</a></li>
-						<li><a href="http://facebook.com/cameronhunter" rel="me">Facebook</a></li>
-						<li><a href="http://twitter.com/cameronhunter" rel="me">Twitter</a></li>
-						<li><a href="http://github.com/cameronhunter" rel="me">GitHub</a></li>
-						<li><a href="http://linkedin.com/in/cameronhunter" rel="me">LinkedIn</a></li>
+						<li><a href="mailto:hello@cameronhunter.co.uk" title="Email" class="email icon-email" rel="me"><span>Email</span></a></li>
+						<li><a href="http://facebook.com/cameronhunter" title="Facebook" class="icon-facebook" rel="me"><span>Facebook</span></a></li>
+						<li><a href="http://twitter.com/cameronhunter" title="Twitter" class="icon-twitter" rel="me"><span>Twitter</span></a></li>
+						<li><a href="http://github.com/cameronhunter" title="Github" class="icon-github" rel="me"><span>GitHub</span></a></li>
+						<li><a href="http://linkedin.com/in/cameronhunter" title="LinkedIn" class="icon-linkedin" rel="me"><span>LinkedIn</span></a></li>
 					</ul>
 				</section>
 			</article>
@@ -42,6 +42,7 @@
 		</div>
 		<script>
       var _gaq = [['_setAccount', 'UA-1802050-8'], ['_trackPageview'], ['_trackPageLoadTime']];
+      var stream = [];
       head.js('/js/stream.min.js', 'http://pipes.yahoo.com/pipes/pipe.run?_id=9cdb8accfa6c7237f91bdd9f0c0ebd1e&_render=json&_callback=showStream').
 			     js('http://www.google-analytics.com/ga.js');
 		</script>

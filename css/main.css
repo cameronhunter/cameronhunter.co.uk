@@ -1,4 +1,4 @@
-@font-face{font-family:Neucha;font-style:normal;font-weight:400;src:local('Neucha'), url('http://themes.googleusercontent.com/font?kit=bijdhB-TzQdtpl0ykhGh4Q') format('truetype')}
+@font-face{font-family:Neucha;font-style:normal;font-weight:400;src: url('http://themes.googleusercontent.com/static/fonts/neucha/v4/Z14xx5NkAnXABtaPytVZVA.woff') format('woff'), url('http://themes.googleusercontent.com/font?kit=bijdhB-TzQdtpl0ykhGh4Q') format('truetype');}
 *{margin:0;padding:0}
 body{border-top:5px solid #333;background: #E8E8E8 url(/images/bg.png) top left repeat;}
 #container{color:#333;font-family:Neucha, arial, sans-serif;text-transform:lowercase;width:1022px;margin:30px auto 100px}
@@ -6,9 +6,9 @@ h1{display:inline-block;font-size:96px;font-weight:400;line-height:96px;text-ali
 a{text-decoration:none}
 #about{display:block;position:relative;margin:0 0 40px 10px}
 #about header a{color:#333;text-shadow:0 1px #fff;}
-#about li{display:inline-block;margin:0 1px 0 0;text-shadow:0 1px #000;}
-#about li:first-child{margin-left:15px}
-#about li:last-child{margin-right:15px}
+#contact li{display:inline-block;margin:0 1px 0 0;text-shadow:0 1px #000;}
+#contact li:first-child{margin-left:15px}
+#contact li:last-child{margin-right:15px}
 #about section{position:absolute;top:50px}
 #about section a{background:#333;color:#fff;padding:3px 5px;text-shadow:0 1px #000}
 #about section a:hover{background:#FF2727}
@@ -43,14 +43,34 @@ a{text-decoration:none}
 #stream a:hover{text-decoration:underline}
 
 @media (max-width: 1021px) {
+  h1{font-size:56px!important;line-height:56px!important;}
   body{width:100%!important;text-align:center!important;}
   #container{width:auto!important;margin:25px 10px 0!important;}
-  h1{font-size:56px!important;line-height:56px!important;}
-  #details{margin-top:5px;font-size:85%!important;}
+  #about{margin-bottom:25px !important;}
   #about,#details{margin-left:0!important;}
-  #about li{margin:0 2px!important;}
+  #contact li{margin:0 1px !important;}
   #stream article:hover{-webkit-transform:scale(1.0);}
-  #contact{position:static!important;margin-top:30px!important;}
+  #contact{position:static!important;margin-top:25px!important;}
   #stream{height:auto!important;padding:0!important;}
-  #stream > article{position:static!important;display:block!important;width:auto!important;height:187px!important;margin:0 0 15px!important;padding:0!important;}
+  #stream > article{position:static!important;display:block!important;height:187px!important;margin:0 0 15px!important;padding:0!important;}
+}
+
+@media (max-width: 480px) {
+  h1{font-size:48px!important;line-height:48px!important;}
+  #details{margin-top:5px;font-size:85%!important;}
+  .icon-email{background:transparent url(/images/email.png) no-repeat top left!important;}
+  .icon-facebook{background:transparent url(/images/facebook.png) no-repeat top left!important;}
+  .icon-twitter{background:transparent url(/images/twitter.png) no-repeat top left!important;}
+  .icon-github{background:transparent url(/images/github.png) no-repeat top left!important;}
+  .icon-linkedin{background:transparent url(/images/linkedin.png) no-repeat top left!important;}
+  #contact span{display:none!important;}
+  #contact a{width:24px!important;height:24px!important;display:inline-block!important;}
+  #stream > article {width:auto!important;}
+  .locality:after {content: 'U.K.';}
+  .locality > span {display: none !important;}
+}
+
+@media (min-width: 481px) and (max-width: 1021px) {
+  #stream > article {width: 45% !important; display: inline-block !important;}
+  #stream > article:nth-child(odd) { margin-right: 15px !important; }
 }
