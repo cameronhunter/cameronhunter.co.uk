@@ -6,6 +6,7 @@ a{text-decoration:none}
 #about{display:block;position:relative;margin:0 0 40px 10px}
 #about h1{display:inline-block;font-size:96px;font-weight:400;line-height:96px;text-align:left}
 #about header a{color:#333;text-shadow:0 1px #fff;}
+#about .photo {display:none;}
 #details {margin-left:6px}
 #contact{position:absolute;right:0; top:45px}
 #contact ul{display:relative;list-style:none}
