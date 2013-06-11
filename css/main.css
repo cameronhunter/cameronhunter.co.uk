@@ -65,7 +65,7 @@ a{text-decoration:none}
   .twitter{background-image:url(/images/twitter.png);}
   .github{background-image:url(/images/github.png);}
   .linkedin{background-image:url(/images/linkedin.png);}
-  .locality:after {content: 'U.K.';}
+  .locality:after {content: 'U.S.A.';}
   .locality span {display:none;}
 }
 
