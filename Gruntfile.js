@@ -39,6 +39,9 @@ module.exports = function(grunt) {
         dest: '<%= target %>',
         options: {
           beautify: false,
+          scripts: {
+            "google-analytics": '<%= source %>/js/google-analytics.js',
+          },
           styles: {
             "main": '<%= temp %>/css/main.min.css'
           }
@@ -49,7 +52,6 @@ module.exports = function(grunt) {
     copy: {
       build: {
         files: [
-          {expand: true, cwd: '<%= source %>', src: 'images/background.jpg', dest: '<%= target %>', filter: 'isFile'},
           {expand: true, cwd: '<%= source %>', src: 'favicon.ico', dest: '<%= target %>', filter: 'isFile'},
           {expand: true, cwd: '<%= source %>', src: 'robots.txt', dest: '<%= target %>', filter: 'isFile'}
         ]
