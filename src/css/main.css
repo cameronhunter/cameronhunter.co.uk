@@ -16,13 +16,26 @@ li {
  * STYLES
  */
 body {
-  background-color: #040409;
-  background-image: url(/images/background.jpg);
-  background-size: cover;
+  background: #040409;
   text-align: center;
   text-transform: uppercase;
   font-family: "brandon-grotesque";
   text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: #040409 url(/images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -moz-filter: blur(10px) brightness(90%);
+  -webkit-filter: blur(10px) brightness(90%);
+  filter: blur(10px) brightness(90%);
 }
 
 a:hover {
