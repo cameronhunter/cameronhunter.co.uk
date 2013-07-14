@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     source: 'src',
     target: 'build',
     temp: '.tmp',
+    aws: grunt.file.readJSON('aws-credentials.json'),
 
     clean: {
       build: ['<%= temp %>', '<%= target %>'],
@@ -56,16 +57,39 @@ module.exports = function(grunt) {
           {expand: true, cwd: '<%= source %>', src: 'robots.txt', dest: '<%= target %>', filter: 'isFile'}
         ]
       }
+    },
+
+    s3: {
+      options: {
+        key: '<%= aws.key %>',
+        secret: '<%= aws.secret %>',
+        bucket: '<%= aws.bucket %>',
+        region: '<%= aws.region %>',
+        access: 'public-read',
+        gzip: true
+      },
+      deploy: {
+        upload: [{
+          src: '<%= target %>/*'
+        }]
+      }
     }
 
   });
 
   grunt.registerTask('build', [
-      'clean:build',
-      'dataUri:build',
-      'cssmin:build',
-      'htmlbuild:build',
-      'copy:build',
-      'clean:temp'
+    'clean:build',
+    'dataUri:build',
+    'cssmin:build',
+    'htmlbuild:build',
+    'copy:build',
+    'clean:temp'
   ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    's3:deploy'
+  ]);
+
+  grunt.registerTask('default', ['build']);
 };
