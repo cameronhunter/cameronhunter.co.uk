@@ -53,27 +53,25 @@ module.exports = function(grunt) {
     copy: {
       build: {
         files: [
-          {expand: true, cwd: '<%= source %>', src: 'favicon.ico', dest: '<%= target %>', filter: 'isFile'},
           {expand: true, cwd: '<%= source %>', src: 'robots.txt', dest: '<%= target %>', filter: 'isFile'}
         ]
       }
     },
 
-    s3: {
+    aws_s3: {
       options: {
-        key: '<%= aws.key %>',
-        secret: '<%= aws.secret %>',
+        accessKeyId: '<%= aws.key %>',
+        secretAccessKey: '<%= aws.secret %>',
         bucket: '<%= aws.bucket %>',
-        region: '<%= aws.region %>',
-        access: 'public-read',
-        gzip: true
+        overwrite: true,
+        progress: 'progressBar'
       },
       deploy: {
-        upload: [{
-          src: '<%= target %>/*'
-        }]
+        files: [
+          { expand: true, cwd: 'build', src: ['**'], dest: '/' }
+        ]
       }
-    }
+    },
 
   });
 
@@ -88,7 +86,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', [
     'build',
-    's3:deploy'
+    'aws_s3:deploy'
   ]);
 
   grunt.registerTask('default', ['build']);

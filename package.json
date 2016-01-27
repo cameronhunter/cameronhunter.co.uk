@@ -1,15 +1,21 @@
 {
   "name": "cameronhunter.co.uk",
-  "version": "0.0.0",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "build": "grunt build",
+    "deploy": "grunt deploy"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "matchdep": "latest",
+    "grunt-aws-s3": "^0.14.4",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-copy": "latest",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-htmlmin": "latest",
     "grunt-data-uri": "latest",
     "grunt-html-build": "latest",
-    "grunt-s3": "latest"
+    "matchdep": "latest"
   }
 }
