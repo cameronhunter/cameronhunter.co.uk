@@ -2,11 +2,19 @@ module.exports = function(grunt) {
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+  var aws = (function() {
+    try {
+      return grunt.file.readJSON('aws-credentials.json');
+    } catch (e) {
+      return {};
+    }
+  }());
+
   grunt.initConfig({
     source: 'src',
     target: 'build',
     temp: '.tmp',
-    aws: grunt.file.readJSON('aws-credentials.json'),
+    aws: aws,
 
     clean: {
       build: ['<%= temp %>', '<%= target %>'],
