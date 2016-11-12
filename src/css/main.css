@@ -33,9 +33,9 @@ body:before {
   z-index: -1;
   background: #040409 url(/images/background.jpg) no-repeat center center fixed;
   background-size: cover;
-  -moz-filter: blur(10px) brightness(90%);
-  -webkit-filter: blur(10px) brightness(90%);
-  filter: blur(10px) brightness(90%);
+  -moz-filter: blur(10px) brightness(50%);
+  -webkit-filter: blur(10px) brightness(50%);
+  filter: blur(10px) brightness(50%);
 }
 
 a:hover {
