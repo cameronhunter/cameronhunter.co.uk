@@ -2,3 +2,4 @@
 build/
 node_modules/
 aws-credentials.json
+npm-debug.log
