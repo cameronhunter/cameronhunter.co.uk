@@ -2,11 +2,15 @@
   "name": "cameronhunter.co.uk",
   "version": "2.0.0",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "build": "grunt build",
-    "deploy": "grunt deploy"
+    "deploy": "grunt deploy",
+    "prestart": "opn ./build/index.html",
+    "start": "chokidar './src/**/*' -c 'npm run build'"
   },
   "devDependencies": {
+    "chokidar-cli": "^1.2.0",
     "grunt": "~0.4.1",
     "grunt-aws-s3": "^0.14.4",
     "grunt-cli": "^0.1.13",
@@ -16,6 +20,6 @@
     "grunt-contrib-htmlmin": "latest",
     "grunt-data-uri": "latest",
     "grunt-html-build": "latest",
-    "matchdep": "latest"
+    "opn-cli": "^3.1.0"
   }
 }

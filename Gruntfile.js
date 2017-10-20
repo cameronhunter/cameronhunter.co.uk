@@ -1,6 +1,10 @@
+const { devDependencies } = require('./package.json');
+
 module.exports = function(grunt) {
 
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  Object.keys(devDependencies)
+        .filter((name) => name.startsWith('grunt-') && name !== 'grunt-cli')
+        .forEach(grunt.loadNpmTasks);
 
   var aws = (function() {
     try {
@@ -23,7 +27,7 @@ module.exports = function(grunt) {
 
     dataUri: {
       build: {
-        src: '<%= source %>/css/main.css',
+        src: '<%= source %>/css/*.css',
         dest: '<%= temp %>/css',
         options: {
           target: '<%= source %>/images/*',
@@ -36,7 +40,7 @@ module.exports = function(grunt) {
       build: {
         files: {
           '<%= temp %>/css/main.min.css': [
-            '<%= temp %>/css/main.css',
+            '<%= temp %>/css/*.css'
           ]
         }
       }
@@ -79,8 +83,7 @@ module.exports = function(grunt) {
           { expand: true, cwd: 'build', src: ['**'], dest: '/' }
         ]
       }
-    },
-
+    }
   });
 
   grunt.registerTask('build', [
