@@ -6,7 +6,7 @@
   "scripts": {
     "build": "grunt build",
     "deploy": "grunt deploy",
-    "prestart": "opn ./build/index.html",
+    "prestart": "npm run build && opn ./build/index.html",
     "start": "chokidar './src/**/*' -c 'npm run build'"
   },
   "devDependencies": {
