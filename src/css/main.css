@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 100vh;
+  height: 93vh;
   padding: 5vh 3vw;
   color: #000;
   background: rgba(224, 224, 224, 1.0);
@@ -84,7 +84,7 @@ hr {
   flex-grow: 1;
   background-color: #000;
   border-width: 0;
-  margin: 35px;
+  margin: 3vh;
 }
 
 #contact {
