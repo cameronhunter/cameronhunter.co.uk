@@ -3,7 +3,7 @@ body {
   height: 93vh;
   padding: 5vh 3vw;
   color: #000;
-  background: rgba(224, 224, 224, 1.0);
+  background: #e0e0e0;
   font-family: 'Nunito', sans-serif;
   box-sizing: border-box;
 }
@@ -109,6 +109,7 @@ body {
   display: inline-block;
   width: 24px;
   height: 24px;
+  box-shadow: 0 0 500px #fff;
 }
 
 .Icon--twitter {
