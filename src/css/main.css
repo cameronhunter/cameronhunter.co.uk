@@ -8,7 +8,7 @@ body {
   box-sizing: border-box;
 }
 
-.vcard {
+.Container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -17,23 +17,23 @@ body {
   max-width: 320px;
 }
 
-a {
+.Header-link {
   text-decoration: none;
   color: inherit;
 }
 
-h1 {
+.Header-title {
   font-size: 2.5rem;
   margin: 0;
   text-shadow: 0 0 25px #fff;
   font-family: 'Sorts Mill Goudy', serif;
 }
 
-#avatar {
+.Photo {
   padding: 35px;
 }
 
-.photo {
+.Photo-image {
   display: block;
   width: 100%;
   height: 100%;
@@ -78,7 +78,7 @@ h1 {
   line-height: 1;
 }
 
-hr {
+.Divider {
   width: 1px;
   height: 100%;
   flex-grow: 1;
@@ -87,13 +87,13 @@ hr {
   margin: 3vh;
 }
 
-#contact {
+.Contact {
   width: 100%;
   box-sizing: border-box;
   text-shadow: 0 0 25px #fff;
 }
 
-#contact ul {
+.Contact-list {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -101,6 +101,38 @@ hr {
   margin: 0;
 }
 
-#contact li {
+.Contact-item {
   display: inline-block;
+}
+
+.Icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.Icon--twitter {
+  background: transparent url(/images/twitter.png) no-repeat center center;
+  background-size: contain;
+}
+
+.Icon--github {
+  background: transparent url(/images/github.png) no-repeat center center;
+  background-size: contain;
+}
+
+.Icon--linkedin {
+  background: transparent url(/images/linkedin.png) no-repeat center center;
+  background-size: contain;
+}
+
+.u-screenReaderOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

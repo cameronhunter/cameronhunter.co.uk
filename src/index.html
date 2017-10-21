@@ -16,48 +16,49 @@
 
     <!-- build:style inline main -->
     <link href="css/google-fonts.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <!-- /build -->
   </head>
   <body>
-    <div class="vcard">
-      <a href="https://www.cameronhunter.co.uk" rel="me" class="fn url">
-        <h1 class="n">
-          <span class="given-name">Cameron</span>
-          <span class="family-name">Hunter</span>
-        </h1>
-      </a>
-
-      <div id="avatar">
-        <img class="photo" src="https://www.gravatar.com/avatar/758faf1cf4da6b0114aec8269d625b16.png?s=600"/>
+    <div class="Container vcard">
+      <div class="Header">
+        <a href="https://www.cameronhunter.co.uk" rel="me" class="Header-link fn url">
+          <h1 class="Header-title n">
+            <span class="given-name">Cameron</span>
+            <span class="family-name">Hunter</span>
+          </h1>
+        </a>
       </div>
 
-      <div id="details" class="Figure">
+      <div class="Photo">
+        <img class="Photo-image photo" src="https://www.gravatar.com/avatar/758faf1cf4da6b0114aec8269d625b16.png?s=600"/>
+      </div>
+
+      <div class="Figure">
         <div class="Figure-title title">Software Engineer</div>
         <div class="Figure-details">est. Belfast, N. Ireland | c. Los Gatos, CA</div>
       </div>
 
-      <hr />
+      <hr class="Divider" />
 
-      <section id="contact">
-        <ul>
-          <li>
+      <section class="Contact">
+        <ul class="Contact-list">
+          <li class="Contact-item">
             <a href="https://twitter.com/cameronhunter" title="Twitter" rel="me">
-              <i class="fa fa-lg fa-twitter" aria-hidden="true"></i>
-              <span class="sr-only">Twitter</span>
+              <i class="Icon Icon--twitter" aria-hidden="true"></i>
+              <span class="u-screenReaderOnly">Twitter</span>
             </a>
           </li>
-          <li>
+          <li class="Contact-item">
             <a href="https://github.com/cameronhunter" title="Github" rel="me">
-              <i class="fa fa-lg fa-github" aria-hidden="true"></i>
-              <span class="sr-only">GitHub</span>
+              <i class="Icon Icon--github" aria-hidden="true"></i>
+              <span class="u-screenReaderOnly">GitHub</span>
             </a>
           </li>
-          <li>
+          <li class="Contact-item">
             <a href="https://linkedin.com/in/cameronhunter" title="LinkedIn" rel="me">
-              <i class="fa fa-lg fa-linkedin" aria-hidden="true"></i>
-              <span class="sr-only">LinkedIn</span>
+              <i class="Icon Icon--linkedin" aria-hidden="true"></i>
+              <span class="u-screenReaderOnly">LinkedIn</span>
             </a>
           </li>
         </ul>
