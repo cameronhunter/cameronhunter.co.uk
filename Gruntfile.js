@@ -1,10 +1,9 @@
 const { devDependencies } = require('./package.json');
 
 module.exports = function(grunt) {
-
   Object.keys(devDependencies)
-        .filter((name) => name.startsWith('grunt-') && name !== 'grunt-cli')
-        .forEach(grunt.loadNpmTasks);
+  .filter(name => name.startsWith('grunt-') && name !== 'grunt-cli')
+  .forEach(grunt.loadNpmTasks);
 
   var aws = (function() {
     try {
@@ -12,7 +11,7 @@ module.exports = function(grunt) {
     } catch (e) {
       return {};
     }
-  }());
+  })();
 
   grunt.initConfig({
     source: 'src',
@@ -30,7 +29,7 @@ module.exports = function(grunt) {
         src: '<%= source %>/css/*.css',
         dest: '<%= temp %>/css',
         options: {
-          target: '<%= source %>/images/*',
+          target: '<%= source %>/assets/*',
           baseDir: '<%= source %>'
         }
       }
@@ -39,9 +38,7 @@ module.exports = function(grunt) {
     cssmin: {
       build: {
         files: {
-          '<%= temp %>/css/main.min.css': [
-            '<%= temp %>/css/*.css'
-          ]
+          '<%= temp %>/css/app.min.css': ['<%= temp %>/css/*.css']
         }
       }
     },
@@ -53,10 +50,10 @@ module.exports = function(grunt) {
         options: {
           beautify: false,
           scripts: {
-            "google-analytics": '<%= source %>/js/google-analytics.js',
+            'google-analytics': '<%= source %>/js/google-analytics.js'
           },
           styles: {
-            "main": '<%= temp %>/css/main.min.css'
+            app: '<%= temp %>/css/app.min.css'
           }
         }
       }
@@ -65,7 +62,7 @@ module.exports = function(grunt) {
     copy: {
       build: {
         files: [
-          {expand: true, cwd: '<%= source %>', src: 'robots.txt', dest: '<%= target %>', filter: 'isFile'}
+          { expand: true, cwd: '<%= source %>', src: 'robots.txt', dest: '<%= target %>', filter: 'isFile' }
         ]
       }
     },
@@ -79,9 +76,7 @@ module.exports = function(grunt) {
         progress: 'progressBar'
       },
       deploy: {
-        files: [
-          { expand: true, cwd: 'build', src: ['**'], dest: '/' }
-        ]
+        files: [{ expand: true, cwd: 'build', src: ['**'], dest: '/' }]
       }
     }
   });
@@ -95,10 +90,7 @@ module.exports = function(grunt) {
     'clean:temp'
   ]);
 
-  grunt.registerTask('deploy', [
-    'build',
-    'aws_s3:deploy'
-  ]);
+  grunt.registerTask('deploy', ['build', 'aws_s3:deploy']);
 
   grunt.registerTask('default', ['build']);
 };

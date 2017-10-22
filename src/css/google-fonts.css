@@ -3,7 +3,7 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 600;
-  src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v9/NcqjkPJTQZlJIFxZdZcTe5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
+  src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(/assets/nunito.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
@@ -12,6 +12,6 @@
   font-family: 'Sorts Mill Goudy';
   font-style: normal;
   font-weight: 400;
-  src: local('Sorts Mill Goudy Regular'), local('SortsMillGoudy-Regular'), url(https://fonts.gstatic.com/s/sortsmillgoudy/v7/JzRrPKdwEnE8F1TDmDLMUlQK7fulol8x5Tt6iGGul9Y.woff2) format('woff2');
+  src: local('Sorts Mill Goudy Regular'), local('SortsMillGoudy-Regular'), url(/assets/sorts-mill-goudy.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }

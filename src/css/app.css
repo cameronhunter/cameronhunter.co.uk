@@ -113,17 +113,17 @@ body {
 }
 
 .Icon--twitter {
-  background: transparent url(/images/twitter.png) no-repeat center center;
+  background: transparent url(/assets/twitter.png) no-repeat center center;
   background-size: contain;
 }
 
 .Icon--github {
-  background: transparent url(/images/github.png) no-repeat center center;
+  background: transparent url(/assets/github.png) no-repeat center center;
   background-size: contain;
 }
 
 .Icon--linkedin {
-  background: transparent url(/images/linkedin.png) no-repeat center center;
+  background: transparent url(/assets/linkedin.png) no-repeat center center;
   background-size: contain;
 }
 
