@@ -14,7 +14,7 @@ body {
   height: 100%;
   align-items: center;
   margin: 0 auto;
-  max-width: 320px;
+  max-width: 450px;
 }
 
 .Header-link {
@@ -23,10 +23,11 @@ body {
 }
 
 .Header-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
   text-shadow: 0 0 25px #fff;
   font-family: 'Sorts Mill Goudy', serif;
+  text-align: center;
 }
 
 .Photo {
@@ -51,11 +52,11 @@ body {
 }
 
 .Figure-title:before {
-  content: 'F. 1';
+  content: 'Fig. 1';
   position: absolute;
   font-family: 'Nunito', sans-serif;
   font-size: 0.8rem;
-  left: 0;
+  left: -10px;
   top: 0;
   border-bottom: 1px solid #000;
   line-height: 1.2;
@@ -74,8 +75,18 @@ body {
 
 .Figure-details {
   font-family: 'Sorts Mill Goudy', serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1;
+}
+
+.Figure-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Figure-link:hover,
+.Figure-link:focus {
+  text-decoration: underline;
 }
 
 .Divider {
@@ -103,6 +114,15 @@ body {
 
 .Contact-item {
   display: inline-block;
+}
+
+.Contact-link {
+  opacity: 0.65;
+}
+
+.Contact-link:hover,
+.Contact-link:focus {
+  opacity: 1;
 }
 
 .Icon {

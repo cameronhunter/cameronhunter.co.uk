@@ -6,20 +6,20 @@
   "scripts": {
     "build": "grunt build",
     "deploy": "grunt deploy",
-    "prestart": "npm run build && opn ./build/index.html",
+    "prestart": "npm run build && open ./build/index.html",
     "start": "chokidar './src/**/*' -c 'npm run build'"
   },
   "devDependencies": {
-    "chokidar-cli": "^1.2.0",
-    "grunt": "~0.4.1",
-    "grunt-aws-s3": "^0.14.4",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-clean": "latest",
-    "grunt-contrib-copy": "latest",
-    "grunt-contrib-cssmin": "latest",
-    "grunt-contrib-htmlmin": "latest",
-    "grunt-data-uri": "latest",
-    "grunt-html-build": "latest",
-    "opn-cli": "^3.1.0"
+    "chokidar-cli": "^2.1.0",
+    "grunt": "^1.4.0",
+    "grunt-aws-s3": "^2.0.2",
+    "grunt-cli": "^1.4.2",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-data-uri": "^0.3.0",
+    "grunt-html-build": "^0.7.1",
+    "opn-cli": "^5.0.0"
   }
 }
