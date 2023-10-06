@@ -132,6 +132,11 @@ body {
   box-shadow: 0 0 500px #fff;
 }
 
+.Icon--reddit {
+  background: transparent url(/assets/reddit.png) no-repeat center center;
+  background-size: contain;
+}
+
 .Icon--keybase {
   background: transparent url(/assets/keybase.png) no-repeat center center;
   background-size: contain;

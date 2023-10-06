@@ -1,11 +1,11 @@
 const { devDependencies } = require('./package.json');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   Object.keys(devDependencies)
-  .filter(name => name.startsWith('grunt-') && name !== 'grunt-cli')
-  .forEach(grunt.loadNpmTasks);
+    .filter((name) => name.startsWith('grunt-') && name !== 'grunt-cli')
+    .forEach(grunt.loadNpmTasks);
 
-  var aws = (function() {
+  var aws = (function () {
     try {
       return grunt.file.readJSON('aws-credentials.json');
     } catch (e) {
@@ -61,9 +61,7 @@ module.exports = function(grunt) {
 
     copy: {
       build: {
-        files: [
-          { expand: true, cwd: '<%= source %>', src: 'robots.txt', dest: '<%= target %>', filter: 'isFile' }
-        ]
+        files: [{ expand: true, cwd: '<%= source %>', src: 'robots.txt', dest: '<%= target %>', filter: 'isFile' }]
       }
     },
 
@@ -71,7 +69,8 @@ module.exports = function(grunt) {
       options: {
         accessKeyId: '<%= aws.key %>',
         secretAccessKey: '<%= aws.secret %>',
-        bucket: '<%= aws.bucket %>',
+        region: 'us-west-1',
+        bucket: 'cameronhunter.co.uk',
         overwrite: true,
         progress: 'progressBar'
       },
