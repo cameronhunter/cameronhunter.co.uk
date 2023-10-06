@@ -132,8 +132,8 @@ body {
   box-shadow: 0 0 500px #fff;
 }
 
-.Icon--twitter {
-  background: transparent url(/assets/twitter.png) no-repeat center center;
+.Icon--keybase {
+  background: transparent url(/assets/keybase.png) no-repeat center center;
   background-size: contain;
 }
 
